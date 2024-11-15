@@ -1,20 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqh5ymai2351c"]
+[gd_scene load_steps=6 format=3 uid="uid://cqh5ymai2351c"]
 
 [ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_kl6vc"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_x3613"]
+[ext_resource type="PackedScene" uid="uid://cs2sw78qp5n8f" path="res://Scenes/PivotShape.tscn" id="3_4rf8n"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qq5mq"]
 
 [sub_resource type="Environment" id="Environment_b111r"]
 background_mode = 1
-background_color = Color(0.266268, 0.233096, 0.146677, 1)
+background_color = Color(0.392157, 0.392157, 0.392157, 1)
 ambient_light_energy = 0.0
 
 [node name="World" type="Node3D" node_paths=PackedStringArray("camera", "environment")]
 script = ExtResource("1_x3613")
-background_color = Color(0.266268, 0.233096, 0.146677, 1)
+background_color = Color(0.392157, 0.392157, 0.392157, 1)
 camera = NodePath("Camera3D")
 environment = NodePath("WorldEnvironment")
+save_path = "/Users/kmt/Desktop"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 attributes = SubResource("CameraAttributesPractical_qq5mq")
@@ -23,14 +25,10 @@ script = ExtResource("1_kl6vc")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_b111r")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.70089, 0.618102, 0.430583)
 shadow_enabled = true
 
-[node name="Pivot" type="Marker3D" parent="."]
-
-[node name="Mesh" type="MeshInstance3D" parent="Pivot"]
+[node name="PivotShape" parent="." instance=ExtResource("3_4rf8n")]
