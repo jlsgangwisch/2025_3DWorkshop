@@ -1,4 +1,4 @@
-# 2024_3DWorkshop
+# 2025_SatoWorkshop
 
 https://godotengine.org/
 
