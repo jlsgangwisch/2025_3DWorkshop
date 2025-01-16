@@ -7,3 +7,5 @@ Intro Tutorial: https://www.youtube.com/watch?v=CI-cVKuSD1s&list=PLda3VoSoc_TTp8
 Frozen Frogs - Osamu Sato: https://www.youtube.com/watch?v=FPCIsW8g4UI
 
 The Art of Computer Designing by Osamu Sato: https://archive.org/details/satoArtOfComputerDesigning
+
+Now with more gangwisch!
